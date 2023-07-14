@@ -5,6 +5,8 @@ from models import storage
 
 app = Flask(__name__)
 
+app.debug = True
+
 
 def StartFlask():
     """ Start a Flask web application """
