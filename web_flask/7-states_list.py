@@ -2,8 +2,13 @@
 """Start a Flask web application"""
 from flask import Flask, render_template
 from models import storage
+
 app = Flask(__name__)
-app.url_map.strict_slashes = False
+
+
+def StartFlask():
+    """ Start a Flask web application """
+    app.run(host='0.0.0.0', port=5000)
 
 
 @app.route('/states_list')
@@ -21,4 +26,4 @@ def teardown_db(exception):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    StartFlask()
