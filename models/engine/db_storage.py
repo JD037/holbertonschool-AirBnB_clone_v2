@@ -33,7 +33,7 @@ class DBStorage:
         if env == "test":
             Base.metadata.drop_all(self.__engine)
 
-            self.reload()
+        self.reload()
 
     def all(self, cls=None):
         """query on the database"""
